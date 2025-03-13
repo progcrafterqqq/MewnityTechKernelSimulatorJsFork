@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgCrafter Kernel</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer  src="script.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="title">ProgCrafter Kernel v1.0</div>
+        <div id="stats">
+            <div class="stat">CPU: <span id="cpu-usage">2%</span></div>
+            <div class="stat">Memory: <span id="memory-usage">128MB / 2GB</span></div>
+            <div class="stat">Processes: <span id="process-count">7</span></div>
+            <div class="stat">Uptime: <span id="uptime">00:00:00</span></div>
+        </div>
+    </div>
+    
+    <div id="main">
+        <div id="sidebar">
+            <div class="sidebar-title">Active Processes</div>
+            <div id="process-list">
+                <div class="process-item process-running" data-pid="1">init (PID: 1)</div>
+                <div class="process-item process-running" data-pid="2">kerneld (PID: 2)</div>
+                <div class="process-item process-running" data-pid="3">syslogd (PID: 3)</div>
+                <div class="process-item process-running" data-pid="4">netd (PID: 4)</div>
+                <div class="process-item process-waiting" data-pid="5">taskd (PID: 5)</div>
+                <div class="process-item process-running" data-pid="6">userd (PID: 6)</div>
+                <div class="process-item process-running" data-pid="7">shelld (PID: 7)</div>
+            </div>
+            
+            <div class="sidebar-title" style="margin-top: 15px;">Loaded Modules</div>
+            <div id="module-list">
+                <div class="module-item">core.js</div>
+                <div class="module-item">memory.js</div>
+                <div class="module-item">process.js</div>
+                <div class="module-item">filesystem.js</div>
+                <div class="module-item">network.js</div>
+                <div class="module-item">security.js</div>
+            </div>
+        </div>
+        
+        <div id="terminal-container">
+            <div id="output"></div>
+            <div id="input-container">
+                <div id="prompt">root@progcrafter# </div>
+                <input type="text" id="input" autofocus placeholder="Enter kernel command...">
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer">
+        ProgCrafter Kernel v1.0 | Running on JavaScript VM | Admin Mode
+    </div>
+    
+    <div class="tooltip" id="tooltip"></div>
+</body>
+</html>

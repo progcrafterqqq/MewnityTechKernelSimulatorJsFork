@@ -1,0 +1,185 @@
+:root {
+    --bg-color: #0a0a0a;
+    --text-color: #33ff33;
+    --accent-color: #007acc;
+    --border-color: #444;
+    --input-bg: #111;
+    --header-color: #ff5555;
+    --error-color: #ff5555;
+    --success-color: #55ff55;
+    --warning-color: #ffff55;
+    --info-color: #5555ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#header {
+    padding: 10px;
+    background-color: var(--input-bg);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--header-color);
+}
+
+#stats {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#main {
+    display: flex;
+    height: calc(100vh - 110px);
+}
+
+#sidebar {
+    width: 200px;
+    background-color: var(--input-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.sidebar-title {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+}
+
+.process-item, .module-item {
+    padding: 5px;
+    margin-bottom: 3px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.process-item:hover, .module-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.process-running {
+    color: var(--success-color);
+}
+
+.process-waiting {
+    color: var(--warning-color);
+}
+
+.process-stopped {
+    color: var(--error-color);
+}
+
+#terminal-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    font-size: 0.9rem;
+}
+
+.cmd-line {
+    color: var(--accent-color);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.error-text {
+    color: var(--error-color);
+}
+
+.success-text {
+    color: var(--success-color);
+}
+
+.warning-text {
+    color: var(--warning-color);
+}
+
+.info-text {
+    color: var(--info-color);
+}
+
+#input-container {
+    display: flex;
+    height: 30px;
+}
+
+#prompt {
+    background-color: transparent;
+    color: var(--accent-color);
+    font-weight: bold;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#input {
+    flex: 1;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 5px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+#input:focus {
+    border-color: var(--accent-color);
+}
+
+#footer {
+    padding: 5px 10px;
+    background-color: var(--input-bg);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 5px;
+    max-width: 200px;
+    z-index: 100;
+    display: none;
+}
