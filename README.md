@@ -26,16 +26,8 @@ ProgCrafter Kernel is a purely client-side JavaScript application that simulates
 
 1. Clone the repository:
    ```
-   git clone https://github.com/username/progcrafter-kernel.git
+   git clone https://github.com/ProgCrafterq/progcrafter-kernel.git
    ```
-
-2. Open `index.html` in your web browser, or serve it using a simple HTTP server:
-   ```
-   cd progcrafter-kernel
-   python -m http.server 8000
-   ```
-
-3. Access the application at `http://localhost:8000`
 
 ## Usage
 
