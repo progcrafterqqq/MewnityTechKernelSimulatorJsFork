@@ -315,7 +315,7 @@ Type 'help' for available commands
     writeCommandLine(command) {
         const div = document.createElement('div');
         div.className = 'cmd-line';
-        div.textContent = `root@progcrafter# ${command}`;
+        div.textContent = `root@mewnity# ${command}`;
         this.outputElement.appendChild(div);
         this.outputElement.scrollTop = this.outputElement.scrollHeight;
     }
